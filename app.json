@@ -9,17 +9,17 @@
     },
     "ALARM_HIGH": {
       "description": "Default setting for new browser views, for the High alarm (triggered when BG crosses BG_TARGET_TOP). ('on' or 'off')",
-      "value": "on",
+      "value": "off",
       "required": false
     },
     "ALARM_LOW": {
       "description": "Default setting for new browser views, for the Low alarm (triggered when BG crosses BG_TARGET_BOTTOM). ('on' or 'off')",
-      "value": "on",
+      "value": "off",
       "required": false
     },
     "ALARM_TIMEAGO_URGENT": {
       "description": "Default setting for new browser views, for an urgent alarm when CGM data hasn't been received in the number of minutes set in ALARM_TIMEAGO_URGENT_MINS. ('on' or 'off')",
-      "value": "on",
+      "value": "off",
       "required": false
     },
     "ALARM_TIMEAGO_URGENT_MINS": {
@@ -29,7 +29,7 @@
     },
     "ALARM_TIMEAGO_WARN": {
       "description": "Default setting for new browser views, for a warning alarm when CGM data hasn't been received in the number of minutes set in ALARM_TIMEAGO_WARN_MINS. ('on' or 'off')",
-      "value": "on",
+      "value": "off",
       "required": false
     },
     "ALARM_TIMEAGO_WARN_MINS": {
@@ -44,12 +44,12 @@
     },
     "ALARM_URGENT_HIGH": {
       "description": "Default setting for new browser views, for the Urgent High alarm (triggered when BG crosses BG_HIGH). ('on' or 'off')",
-      "value": "on",
+      "value": "off",
       "required": false 
     },
     "ALARM_URGENT_LOW": {
       "description": "Default setting for new browser views, for the Urgent Low alarm (triggered when BG crosses BG_LOW). ('on' or 'off')",
-      "value": "on",
+      "value": "off",
       "required": false
     },
     "API_SECRET": {
@@ -59,22 +59,22 @@
     },
     "BG_HIGH": {
       "description": "Urgent High BG threshold, triggers the ALARM_URGENT_HIGH alarm. Set in mg/dL or mmol/L, as set in DISPLAY_UNITS variable.",
-      "value": "260",
+      "value": "10",
       "required": false
     },
     "BG_LOW": {
       "description": "Urgent Low BG threshold, triggers the ALARM_URGENT_LOW alarm. Set in mg/dL or mmol/L, as set in DISPLAY_UNITS variable.",
-      "value": "55",
+      "value": "3.5",
       "required": false
     },
     "BG_TARGET_BOTTOM": {
       "description": "Low BG threshold, triggers the ALARM_LOW alarm. Set in mg/dL or mmol/L, as set in DISPLAY_UNITS variable.",
-      "value": "80",
+      "value": "4.5",
       "required": false
     },
     "BG_TARGET_TOP": {
       "description": "High BG threshold, triggers the ALARM_HIGH alarm. Set in mg/dL or mmol/L, as set in DISPLAY_UNITS variable.",
-      "value": "180",
+      "value": "8",
       "required": false
     },
     "BOLUS_RENDER_OVER": {
@@ -104,12 +104,12 @@
     },
     "DISPLAY_UNITS": {
       "description": "Preferred BG units for the site: 'mg/dl' or 'mmol/L' (or just 'mmol').",
-      "value": "mg/dl",
+      "value": "mmol/L",
       "required": true
     },
     "ENABLE": {
       "description": "Plugins to enable for your site. Must be a space-delimited, lower-case list. Include the word 'bridge' here if you are receiving data from the Dexcom Share service. Include 'mmconnect' if you are bridging from the MiniMed CareLink service.",
-      "value": "careportal basal dbsize",
+      "value": "careportal dbsize delta timeago cob iob sage",
       "required": false
     },
     "MMCONNECT_USER_NAME": {
@@ -134,7 +134,7 @@
     },
     "SHOW_PLUGINS": {
       "description": "Default setting for whether or not these plugins are checked (active) by default, not merely enabled. Include plugins here as in the ENABLE line; space-separated and lower-case.",
-      "value": "careportal dbsize",
+      "value": "careportal dbsize delta timeago cob iob sage",
       "required": false
     },
     "SHOW_RAWBG": {
@@ -149,11 +149,15 @@
     },
     "TIME_FORMAT": {
       "description": "Default setting for new browser views, for the time mode. ('12' or '24')",
-      "value": "12",
+      "value": "24",
+      "required": false 
+    },
+    "LANGUAGE": {
+      "description": "Syte language display",
+      "value": "ru",
       "required": false 
     }
   },
   "addons": [
-    "papertrail"
   ]
 }
