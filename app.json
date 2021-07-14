@@ -156,6 +156,11 @@
       "description": "Syte language display",
       "value": "ru",
       "required": false 
+    },
+    "SCALE_Y": {
+      "description": "The type of scaling used for the Y axis of the charts system wide. ('log', 'linear' or 'log-dynamic')",
+      "value": "linear",
+      "required": false 
     }
   },
   "addons": [
